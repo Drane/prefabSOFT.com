@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_prefabsoft_config_model_PrefabKeyValue" object="${prefabkeyvalue}" path="/prefabkeyvalues" z="111toeS6qQrAU8DyeeGfW6VD9/Q=">
+        <field:display field="valueString" id="s_com_prefabsoft_config_model_PrefabKeyValue_valueString" object="${prefabkeyvalue}" z="4bGgz1geoRyxnwm20TFqKjohR0E="/>
+        <field:display field="keyString" id="s_com_prefabsoft_config_model_PrefabKeyValue_keyString" object="${prefabkeyvalue}" z="L4IHBSciEa30EyykDDVeBT56ia4="/>
+    </page:show>
+</div>

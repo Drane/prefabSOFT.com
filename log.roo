@@ -1,0 +1,12 @@
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-12 23:13:53
+project --topLevelPackage com.prefabsoft --projectName prefabSOFT.com --java 6
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-12 23:13:54
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-12 23:14:05
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.config.model.PrefabKeyValue
+field string keyString
+field string valueString
+entity --class ~.config.model.PrefabConfig
+field set --type ~.config.model.PrefabKeyValue --fieldName keyValuePairs
+// script --file script\prefabSOFT\PrefabConfig.roo
+controller all --package ~.config.web
