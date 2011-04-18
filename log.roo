@@ -10,3 +10,5 @@ entity --class ~.config.model.PrefabConfig
 field set --type ~.config.model.PrefabKeyValue --fieldName keyValuePairs
 // script --file script\prefabSOFT\PrefabConfig.roo
 controller all --package ~.config.web
+// Spring Roo 1.1.3.RELEASE [rev 4404ffb] log opened at 2011-04-18 14:43:23
+// Spring Roo 1.1.3.RELEASE [rev 4404ffb] log closed at 2011-04-18 14:56:41

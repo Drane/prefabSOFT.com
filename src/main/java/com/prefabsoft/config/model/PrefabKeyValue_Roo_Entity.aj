@@ -93,11 +93,11 @@ privileged aspect PrefabKeyValue_Roo_Entity {
     }
     
     public static long PrefabKeyValue.countPrefabKeyValues() {
-        return entityManager().createQuery("select count(o) from PrefabKeyValue o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM PrefabKeyValue o", Long.class).getSingleResult();
     }
     
     public static List<PrefabKeyValue> PrefabKeyValue.findAllPrefabKeyValues() {
-        return entityManager().createQuery("select o from PrefabKeyValue o", PrefabKeyValue.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM PrefabKeyValue o", PrefabKeyValue.class).getResultList();
     }
     
     public static PrefabKeyValue PrefabKeyValue.findPrefabKeyValue(Long id) {
@@ -106,7 +106,7 @@ privileged aspect PrefabKeyValue_Roo_Entity {
     }
     
     public static List<PrefabKeyValue> PrefabKeyValue.findPrefabKeyValueEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from PrefabKeyValue o", PrefabKeyValue.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM PrefabKeyValue o", PrefabKeyValue.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

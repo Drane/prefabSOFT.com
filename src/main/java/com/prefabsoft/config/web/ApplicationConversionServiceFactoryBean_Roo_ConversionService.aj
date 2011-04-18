@@ -10,21 +10,20 @@ import org.springframework.format.FormatterRegistry;
 
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
-    Converter<PrefabKeyValue, String> ApplicationConversionServiceFactoryBean.getPrefabKeyValueConverter() {
-        return new Converter<PrefabKeyValue, String>() {
-            public String convert(PrefabKeyValue prefabkeyvalue) {
-                return new StringBuilder().append(prefabkeyvalue.getKeyString()).append(" ").append(prefabkeyvalue.getValueString()).toString();
-            }
-        };
-    }
-    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
-        registry.addConverter(getPrefabKeyValueConverter());
+        registry.addConverter(new PrefabKeyValueConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
         super.afterPropertiesSet();
         installLabelConverters(getObject());
+    }
+    
+    static class com.prefabsoft.config.web.ApplicationConversionServiceFactoryBean.PrefabKeyValueConverter implements Converter<PrefabKeyValue, String>  {
+        public String convert(PrefabKeyValue prefabKeyValue) {
+        return new StringBuilder().append(prefabKeyValue.getKeyString()).append(" ").append(prefabKeyValue.getValueString()).toString();
+        }
+        
     }
     
 }
