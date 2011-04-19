@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prefabsoft</groupId>
 	<artifactId>prefabSOFT.com</artifactId>
@@ -34,14 +35,20 @@
 			<url>https://repository.jboss.org/nexus/content/repositories/releases</url>
 			<name>JBoss Repo</name>
 		</repository>
-		<!-- -->
+		<!-- prefabSOFT -->
 		<repository>
 			<id>java-net</id>
 			<name>Java.net Repository for Maven</name>
 			<url>http://download.java.net/maven/2</url>
 			<layout>default</layout>
 		</repository>
-		<!-- -->
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Technology Maven Repository</name>
+			<url>http://repository.prime.com.tr</url>
+			<layout>default</layout>
+		</repository>
+		<!-- prefabSOFT -->
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -61,7 +68,12 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
-		<!-- -->
+		<!-- prefabSOFT -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>3.0.M1</version>
+		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
@@ -77,7 +89,8 @@
 		<!-- <artifactId>javaee-api</artifactId> -->
 		<!-- <version>6.0</version> -->
 		<!-- </dependency> -->
-		<!-- -->
+		<!-- prefabSOFT -->
+		
 		<!-- General dependencies for standard applications -->
 		<dependency>
 			<groupId>junit</groupId>
